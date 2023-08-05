@@ -63,9 +63,9 @@ penguin
 tux
 color
 vent
-faked
+just faking it
 discord
-monkey
+munchkie
 milk
 british
 human
