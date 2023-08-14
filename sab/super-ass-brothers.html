@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Ass Brothers</title>
+    <style>
+        body {
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+            min-height: 8000px;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            perspective: 100px;
+        }
+
+        .bg-layer {
+            transform: translateZ(-5px);
+            height: 100vh;
+
+            background-image: url("/sab/images/sab_background.png");
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .image {
+            transform: translateZ(1px);
+            text-align: center;
+        }
+
+        .text {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 500px;
+            font-size: 20px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #FFFFFF;
+            background-color: #212121;
+            text-indent: 24px;
+            transform: translateY(-80px);
+            padding: 14px;
+        }
+
+        .left-title-text {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            transform: translateX(-150px);
+            max-width: 240px;
+            font-size: 20px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #FFFFFF;
+            background-color: #212121;
+        }
+
+        .right-title-text {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            transform: translateY(-103px) translateX(150px);
+            max-width: 240px;
+            font-size: 20px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #FFFFFF;
+            background-color: #212121;
+        }
+
+        .title {
+            font-size: 24px;
+            line-height: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="parallax">
+    <div class="bg-layer"></div>
+</div>
+<div>
+    <div class="image">
+        <img src="/sab/images/sab_title.png">
+    </div>
+    <br>
+    <div class="left-title-text">
+        <p>
+            A game by
+        </p>
+        <p class="title">
+            AshQuimby & a_viper
+        </p>
+    </div>
+    <div class="right-title-text">
+        <p>
+            Also featuring music by
+        </p>
+        <p class="title">
+            Beat Thorn
+        </p>
+    </div>
+    <p class="text">
+      Super Ass Brothers was a game that was bad...
+        So, in hopes of making it less bad, me (AshQuimby) and a_viper
+        started anew.
+    </p>
+</div>
+</body>
+</html>
