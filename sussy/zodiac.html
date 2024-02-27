@@ -26,6 +26,7 @@
       }
 
       .gabagool {
+        padding: 8px;
         margin-left: auto;
         margin-right: auto;
         max-width: 500px;
@@ -37,6 +38,7 @@
       }
 
       .cum {
+        padding: 8px;
         color: powderblue;
         border-width: 5px;
         border-style: solid;
@@ -45,6 +47,7 @@
       }
 
       .gabagool-box {
+        padding: 6px;
         font-size: 16px;
         color: white;
         width: 350px;
@@ -55,6 +58,7 @@
       }
 
       .gabagool-button {
+        padding: 6px;
         font-size: 16px;
         color: black;
         border-width: 5px;
@@ -70,31 +74,34 @@
         let input = document.getElementById("box");
         let output = document.getElementById("output");
 
-        var seed = cyrb128(input.value);
+        if (input.value.toLowerCase() == "calico" || input.value.toLowerCase() == "callie") {
+            output.textContent = "Fucking narcissist, why do you want to know what I think about you so bad, huh? I know why...";
+        } else {
+            var seed = cyrb128(input.value);
 
-        var rand = sfc32(seed[0], seed[1], seed[2], seed[3]);
+            var rand = sfc32(seed[0], seed[1], seed[2], seed[3]);
 
-
-        var response = fetch("/sussy/signs.txt").then((response) => response.text()
-            .then((text) => {
-                var textList = text.split("\n");
-                var zodiac = new Array(0, 0, 0, 0, 0);
-                zodiac[0] = (textList[Math.round(rand() * textList.length)]);
-                zodiac[1] = (textList[Math.round(rand() * textList.length)]);
-                zodiac[2] = (textList[Math.round(rand() * textList.length)]);
-                zodiac[3] = (textList[Math.round(rand() * textList.length)]);
-                zodiac[4] = (textList[Math.round(rand() * textList.length)]);
-                var builtString = "Your zodiac signs are: ";
-                for (let i = 0; i < zodiac.length; i++) {
-                    builtString += zodiac[i];
-                    if (i != zodiac.length - 1) {
-                        builtString += ", ";
-                    } else {
-                        builtString += ".";
+            var response = fetch("/sussy/signs.txt").then((response) => response.text()
+                .then((text) => {
+                    var textList = text.split("\n");
+                    var zodiac = new Array(0, 0, 0, 0, 0);
+                    zodiac[0] = (textList[Math.round(rand() * textList.length)]);
+                    zodiac[1] = (textList[Math.round(rand() * textList.length)]);
+                    zodiac[2] = (textList[Math.round(rand() * textList.length)]);
+                    zodiac[3] = (textList[Math.round(rand() * textList.length)]);
+                    zodiac[4] = (textList[Math.round(rand() * textList.length)]);
+                    var builtString = "Your zodiac signs are: ";
+                    for (let i = 0; i < zodiac.length; i++) {
+                        builtString += zodiac[i];
+                        if (i != zodiac.length - 1) {
+                            builtString += ", ";
+                        } else {
+                            builtString += ".";
+                        }
                     }
-                }
-                output.textContent = builtString;
-            }));
+                    output.textContent = builtString;
+                }));
+        }
     }
 
     function cyrb128(str) {
