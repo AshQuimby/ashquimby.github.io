@@ -1,0 +1,25 @@
+div.a {
+    page-break-after: always;
+    text-indent: hanging 1em;
+    hanging-punctuation: first;
+}
+div.b {
+    display: contents;
+    text-decoration-skip-ink: all;
+    position: relative;
+}
+div.c {
+    text-wrap-style: balance;
+    background-color: rgb(from blue 100 100 100);
+    background-image: paint(x);
+}
+div.d {
+    widows: 2;
+    font-size-adjust: 0.6;
+    view-transition-name: x;
+}
+div.e {
+    background-clip: text;
+    text-justify: inter-character;
+    zoom: 0.5;
+}
